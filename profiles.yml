@@ -5,8 +5,8 @@ ipy_magic_test:
     dev:
       type: postgres
       host: localhost
-      user: "{{ env_var('DBT_USER', 'matt.winkler') }}"
-      password: "{{ env_var('DBT_PASSWORD', 'admin') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
       port: 5432
       dbname: dev
       schema: dbt_mwinkler
