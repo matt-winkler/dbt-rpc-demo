@@ -1,0 +1,13 @@
+# example profiles.yml file
+ipy_magic_test:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: "{{ env_var('DBT_USER', 'matt.winkler') }}"
+      password: "{{ env_var('DBT_PASSWORD', 'admin') }}"
+      port: 5432
+      dbname: dev
+      schema: dbt_mwinkler
+      threads: 2
